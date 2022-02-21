@@ -24,6 +24,7 @@ int GetValueInt(const char *value, char **strs, int qnt);
 unsigned int GetValueUInt(const char *value, char **strs, int qnt);
 double GetValueDouble(const char *value, char **strs, int qnt);
 float GetValueFloat(const char *value, char **strs, int qnt);
+int GetIndexOfTag(const char *tag, char **strs, int qnt);
 #endif
 
 #ifdef PARSER_IMPLEMENTATION
@@ -164,6 +165,27 @@ double GetValueDouble(const char *value, char **strs, int qnt)
 float GetValueFloat(const char *value, char **strs, int qnt)
 {
     return *(float*)GetValue(value, strs, qnt, P_FLOAT);
+}
+
+int GetIndexOfTag(const char *tag, char **strs, int qnt)
+{
+    int i = 0;
+    int r = 0;
+    for (i = 0; i < qnt; i++)
+    {
+        r = strcmp(tag, strs[i]);
+        if (r == 0)
+        {
+            break;
+        }
+    }
+
+    if (r != 0)
+    {
+        fprintf(stderr, "%s NOT FOUND ON STRINGS\n", tag);
+        exit(-1);
+    }
+    return i;
 }
 
 #endif
