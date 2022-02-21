@@ -1,6 +1,5 @@
 #ifndef __PARSER
 #define __PARSER
-#endif
 #include <stdlib.h>
 #include <stdio.h>
 #include <assert.h>
@@ -25,7 +24,7 @@ int GetValueInt(const char *value, char **strs, int qnt);
 unsigned int GetValueUInt(const char *value, char **strs, int qnt);
 double GetValueDouble(const char *value, char **strs, int qnt);
 float GetValueFloat(const char *value, char **strs, int qnt);
-
+#endif
 
 #ifdef PARSER_IMPLEMENTATION
 
