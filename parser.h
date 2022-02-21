@@ -95,12 +95,20 @@ void *GetValue(const char *value, char **strs, int qnt, P_TYPES type)
     uintptr_t *ret = (uintptr_t*)malloc(sizeof(uintptr_t));
     *ret = 0;
     int i = 0;
+    int r = 0;
     for (i = 0; i < qnt; i++)
     {
-        if (strcmp(value, strs[i]) == 0)
+        r = strcmp(value, strs[i]);
+        if (r == 0)
         {
             break;
         }
+    }
+
+    if (r != 0)
+    {
+        fprintf(stderr, "%s NOT FOUND ON STRINGS\n", value);
+        exit(-1);
     }
 
     switch (type)

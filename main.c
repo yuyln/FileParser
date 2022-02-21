@@ -18,5 +18,7 @@ int main(int argc, char **argv)
     printf("%d\n", B);
     printf("%f\n", D);
     printf("%f\n", E);
+    float T = GetValueFloat("T", parsed, qnt);
+    printf("%f\n", T);
     return 0;
 }
