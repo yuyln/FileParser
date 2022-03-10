@@ -25,7 +25,6 @@ unsigned int GetValueUInt(const char *value, char **strs, int qnt);
 double GetValueDouble(const char *value, char **strs, int qnt);
 float GetValueFloat(const char *value, char **strs, int qnt);
 int GetIndexOfTag(const char *tag, char **strs, int qnt);
-#endif
 
 #ifdef PARSER_IMPLEMENTATION
 
@@ -187,5 +186,7 @@ int GetIndexOfTag(const char *tag, char **strs, int qnt)
     }
     return i;
 }
+
+#endif
 
 #endif
