@@ -15,7 +15,7 @@ typedef enum
     P_UINT
 } P_TYPES;
 
-static const char *separetors = " =-/\n\t:";
+static const char *separetors = " =\n\t:";
 char *ShiftStrings(int *qnt, char ***str);
 char **Parse(char *str, int *qnt);
 char *ReadFile(FILE *stream);
