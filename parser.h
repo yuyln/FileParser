@@ -6,6 +6,9 @@
 #include <string.h>
 #include <errno.h>
 #include <stdint.h>
+#ifdef _MSC_VER
+#define strtok_r strtok_s
+#endif
 
 typedef enum
 {
