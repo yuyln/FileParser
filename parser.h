@@ -21,7 +21,7 @@ typedef enum
 static const char *separetors = " =\n\t:";
 char *ShiftStrings(int *qnt, char ***str);
 char **Parse(char *str, int *qnt);
-char *ReadFile(FILE *stream);
+char *ReadFileP(FILE *stream);
 void *GetValue(const char *value, char **strs, int qnt, P_TYPES type);
 int GetValueInt(const char *value, char **strs, int qnt);
 unsigned int GetValueUInt(const char *value, char **strs, int qnt);
@@ -72,7 +72,7 @@ char **Parse(char *str, int *qnt)
     return out;
 }
 
-char *ReadFile(FILE *stream)
+char *ReadFileP(FILE *stream)
 {
     if (stream == NULL)
     {
