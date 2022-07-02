@@ -19,7 +19,6 @@ typedef enum
 } P_TYPES;
 
 static const char *separetors = " =\n\t:";
-char *ShiftStrings(int *qnt, char ***str);
 char **Parse(char *str, int *qnt);
 char *ReadFileP(FILE *stream);
 void *GetValue(const char *value, char **strs, int qnt, P_TYPES type);
@@ -30,15 +29,6 @@ float GetValueFloat(const char *value, char **strs, int qnt);
 int GetIndexOfTag(const char *tag, char **strs, int qnt);
 
 #ifdef PARSER_IMPLEMENTATION
-
-char *ShiftStrings(int *qnt, char ***str)
-{
-    assert(*qnt > 0);
-    char *old = **str;
-    *str += 1;
-    *qnt -= 1;
-    return old;
-}
 
 static int FindSize(char *str)
 {
