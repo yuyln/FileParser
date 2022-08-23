@@ -28,8 +28,6 @@ double GetValueDouble(const char *value, char **strs, int qnt);
 float GetValueFloat(const char *value, char **strs, int qnt);
 int GetIndexOfTag(const char *tag, char **strs, int qnt);
 
-#ifdef PARSER_IMPLEMENTATION
-
 static int FindSize(char *str)
 {
     char *auxptr;
@@ -179,7 +177,5 @@ int GetIndexOfTag(const char *tag, char **strs, int qnt)
     }
     return i;
 }
-
-#endif
 
 #endif
