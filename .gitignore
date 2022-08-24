@@ -1,3 +1,7 @@
 .vscode
 *.exe
 *.out
+compile.sh
+compile.bat
+*.stackdump
+builds
